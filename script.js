@@ -4,7 +4,7 @@
 
 // ---- Google Apps Script endpoint ----
 // Paste your deployed web app URL here after following google-apps-script.js setup steps.
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbuPQDCzlc383npaBHGi9oJ5FlHouqlhBrpz5qR1SodYt7Yo9pupEIhYXbwuPSDuBk/exec';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPubWavu3mh-ExC9BIGHH7ee76WgJxtHJZD6vPHDuXTHTciOWH-eIi_MpwmLiNV3A/exec';
 
 // ---- Navbar scroll ----
 const navbar = document.getElementById('navbar');
