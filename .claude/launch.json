@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "beta-scientific",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server ${PORT:-3000} --directory /Users/akhil/betascientific"],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}
