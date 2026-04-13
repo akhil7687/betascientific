@@ -2,6 +2,10 @@
    BETA SCIENTIFIC — SCRIPT
    ============================================= */
 
+// ---- Google Apps Script endpoint ----
+// Paste your deployed web app URL here after following google-apps-script.js setup steps.
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbuPQDCzlc383npaBHGi9oJ5FlHouqlhBrpz5qR1SodYt7Yo9pupEIhYXbwuPSDuBk/exec';
+
 // ---- Navbar scroll ----
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -195,6 +199,25 @@ form.addEventListener('submit', e => {
   const btn = form.querySelector('.btn-submit');
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+
+  // POST to Google Apps Script (fire-and-forget; no-cors means we can't read the response)
+  if (SCRIPT_URL && SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL') {
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({
+        name:    document.getElementById('name')?.value    || '',
+        phone:   document.getElementById('phone')?.value   || '',
+        email:   document.getElementById('email')?.value   || '',
+        company: document.getElementById('company')?.value || '',
+        service: document.getElementById('service')?.value || '',
+        message: document.getElementById('message')?.value || '',
+        source:  'index'
+      })
+    }).catch(() => {});
+  }
+
   setTimeout(() => {
     btn.style.display = 'none';
     success.classList.add('show');

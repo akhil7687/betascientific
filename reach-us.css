@@ -1,0 +1,501 @@
+/* ===================================================
+   BETA SCIENTIFIC — REACH-US LANDING PAGE
+   Loads after style.css; inherits all design tokens.
+   =================================================== */
+
+/* ============================================= */
+/* LP HEADER                                     */
+/* ============================================= */
+#lp-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8,8,8,0.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 1rem 0;
+}
+.lp-header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.lp-logo img { height: 36px; display: block; }
+.lp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--y);
+  background: rgba(255,217,0,0.08);
+  border: 1px solid rgba(255,217,0,0.2);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.lp-badge i { font-size: 0.85em; }
+.lp-phone-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--y);
+  color: var(--b);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  transition: transform var(--t), box-shadow var(--t);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.lp-phone-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255,217,0,0.35);
+  color: var(--b);
+}
+
+/* ============================================= */
+/* LP HERO                                       */
+/* ============================================= */
+#lp-hero {
+  background: var(--b);
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+.lp-hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+.lp-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* H1 */
+.lp-h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.25s both;
+}
+.lp-h1 em {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--y);
+}
+
+.lp-subhead {
+  font-size: 1rem;
+  color: var(--g6);
+  line-height: 1.75;
+  max-width: 460px;
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.4s both;
+}
+
+/* Trust bullets */
+.lp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.5s both;
+}
+.lp-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: var(--g6);
+}
+.lp-bullets li i {
+  color: var(--y);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Stats row */
+.lp-stats-row {
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.65s both;
+}
+
+/* ============================================= */
+/* FORM PANEL                                    */
+/* ============================================= */
+.lp-form-panel {
+  background: var(--g2);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--rl);
+  padding: 2.5rem;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.3s both;
+}
+.lp-form-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--y);
+  border-radius: var(--rl) var(--rl) 0 0;
+}
+.lp-form-header {
+  margin-bottom: 1.75rem;
+}
+.lp-form-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.lp-form-header p {
+  font-size: 0.83rem;
+  color: var(--g6);
+}
+
+/* Trust badges below form */
+.lp-form-trust {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.lp-form-trust span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--g5);
+}
+.lp-form-trust i {
+  color: var(--y);
+  font-size: 0.85em;
+}
+
+/* Validation error state */
+.lp-error {
+  border-color: #ff5555 !important;
+  box-shadow: 0 0 0 3px rgba(255,85,85,0.12) !important;
+}
+
+/* ============================================= */
+/* WHY CHOOSE US                                 */
+/* ============================================= */
+#lp-why { background: var(--b); }
+
+.lp-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.lp-why-card {
+  background: var(--g2);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--rl);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+  position: relative;
+  overflow: hidden;
+}
+.lp-why-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--y);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.lp-why-card:hover::after { transform: scaleX(1); }
+.lp-why-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,217,0,0.15);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+}
+.lp-why-card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.lp-why-card p  { font-size: 0.87rem; color: var(--g6); line-height: 1.65; }
+
+/* ============================================= */
+/* SERVICES GRID (equal columns)                 */
+/* ============================================= */
+#lp-services { background: var(--g1); }
+
+.lp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ============================================= */
+/* STATS BAR OVERRIDE                            */
+/* ============================================= */
+#lp-stats {
+  background: var(--y);
+  padding: 5rem 0;
+}
+#lp-stats sup {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: var(--b);
+  vertical-align: super;
+}
+
+/* ============================================= */
+/* TESTIMONIAL                                   */
+/* ============================================= */
+#lp-testimonial {
+  background: var(--b);
+  padding: 7rem 0;
+}
+.lp-testimonial-card {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--g2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--rl);
+  padding: 3.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.lp-testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--y), transparent);
+  border-radius: var(--rl) var(--rl) 0 0;
+}
+.lp-quote-mark {
+  color: var(--y);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+.lp-quote-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--w);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+.lp-testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.lp-author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--y);
+  color: var(--b);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.lp-testimonial-author > div { text-align: left; }
+.lp-testimonial-author strong { display: block; font-size: 0.9rem; font-weight: 700; }
+.lp-testimonial-author span   { font-size: 0.78rem; color: var(--g5); }
+
+/* ============================================= */
+/* SECOND CTA SECTION                            */
+/* ============================================= */
+#lp-cta {
+  background: var(--y);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.lp-cta-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.lp-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.12);
+  color: var(--b);
+  border: 2px solid rgba(0,0,0,0.2);
+  border-radius: 999px;
+  padding: 0.9rem 1.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--t);
+}
+.lp-call-btn:hover {
+  background: rgba(0,0,0,0.22);
+  transform: translateY(-2px);
+  color: var(--b);
+}
+
+/* ============================================= */
+/* MINIMAL FOOTER                                */
+/* ============================================= */
+#lp-footer {
+  background: var(--g1);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 3.5rem 0 0;
+}
+.lp-footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.lp-footer-brand img.footer-logo { margin-bottom: 0.75rem; }
+.lp-footer-brand p {
+  font-size: 0.87rem;
+  color: var(--g5);
+  line-height: 1.75;
+  max-width: 240px;
+}
+.lp-footer-contact {
+  display: flex;
+  flex-direction: column;
+}
+.lp-footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.87rem;
+  color: var(--g6);
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+.lp-footer-contact i { color: var(--y); margin-top: 0.15rem; flex-shrink: 0; }
+.lp-footer-contact a { color: var(--g6); transition: color var(--t); }
+.lp-footer-contact a:hover { color: var(--y); }
+.lp-footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--g5);
+}
+.lp-back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--g5);
+  transition: color var(--t);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.lp-back-link:hover { color: var(--y); }
+
+/* ============================================= */
+/* MOBILE STICKY PHONE BAR                       */
+/* ============================================= */
+#lp-mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--y);
+  color: var(--b);
+  text-align: center;
+  padding: 0.9rem 1rem;
+  z-index: 999;
+  border-top: 2px solid rgba(0,0,0,0.08);
+}
+#lp-mobile-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--b);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+#lp-mobile-bar i { font-size: 1rem; }
+
+/* ============================================= */
+/* RESPONSIVE                                    */
+/* ============================================= */
+@media (max-width: 1024px) {
+  .lp-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .lp-form-panel {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .lp-why-grid      { grid-template-columns: 1fr 1fr; }
+  .lp-services-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  #lp-hero { min-height: auto; padding: 3rem 0 5rem; }
+  .lp-badge { display: none; }
+  .lp-why-grid      { grid-template-columns: 1fr; }
+  .lp-services-grid { grid-template-columns: 1fr; }
+  .lp-form-panel { padding: 1.75rem; }
+  .lp-footer-inner { flex-direction: column; gap: 2rem; }
+  .lp-footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  #lp-mobile-bar { display: block; }
+  body { padding-bottom: 62px; }
+  .lp-testimonial-card { padding: 2rem 1.5rem; }
+  .lp-cta-btns { flex-direction: column; align-items: flex-start; }
+  #lp-testimonial { padding: 5rem 0; }
+}
+
+@media (max-height: 700px) {
+  #lp-hero { min-height: auto; }
+  .lp-form-panel { padding: 1.75rem; }
+}
