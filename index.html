@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -62,20 +67,36 @@
       </div>
     </div>
     <div class="hero-right">
-      <div class="hero-img-frame">
-        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=900&q=85" alt="Laboratory precision instruments" />
+      <div class="hero-visual">
+
+        <!-- Background image — heavily darkened -->
+        <img class="hv-bg" src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=85" alt="Laboratory" />
+
+        <!-- Yellow radial glow -->
+        <div class="hv-glow"></div>
+
+        <!-- Corner accent brackets -->
         <div class="frame-corner tl"></div>
         <div class="frame-corner tr"></div>
         <div class="frame-corner bl"></div>
         <div class="frame-corner br"></div>
-        <div class="hero-badge-float b1">
-          <i class="fas fa-circle-check"></i>
-          <div><strong>ISO Compliant</strong><span>Certified processes</span></div>
+
+        <!-- Central focal: rings + icon -->
+        <div class="hv-center">
+          <div class="hv-ring r1"></div>
+          <div class="hv-ring r2"></div>
+          <div class="hv-ring r3"></div>
+          <div class="hv-icon"><i class="fas fa-microscope"></i></div>
         </div>
-        <div class="hero-badge-float b2">
-          <i class="fas fa-gauge-high"></i>
-          <div><strong>Calibration Done</strong><span>Certificate issued</span></div>
-        </div>
+
+        <!-- Floating service tags -->
+        <div class="hv-tag t1"><i class="fas fa-gauge-high"></i> Calibration & Validation</div>
+        <div class="hv-tag t2"><i class="fas fa-wrench"></i> Re-installation</div>
+        <div class="hv-tag t3"><i class="fas fa-calendar-check"></i> Preventive Maintenance</div>
+        <div class="hv-tag t4"><i class="fas fa-bolt"></i> Breakdown Support</div>
+        <div class="hv-tag t5"><i class="fas fa-microchip"></i> PCB Repair</div>
+        <div class="hv-tag t6"><i class="fas fa-comments"></i> Consultation</div>
+
       </div>
     </div>
   </section>
