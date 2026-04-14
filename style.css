@@ -22,7 +22,7 @@
   --sh: 0 8px 40px rgba(0,0,0,0.5);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Space Grotesk', sans-serif;
   background: var(--b);
@@ -255,7 +255,7 @@ section { padding: 7rem 0; }
 .line-block {
   display: block;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4.5rem, 9vw, 8rem);
+  font-size: clamp(2.8rem, 13vw, 8rem);
   letter-spacing: 0.02em;
   line-height: 0.95;
 }
