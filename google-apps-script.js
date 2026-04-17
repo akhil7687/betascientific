@@ -21,7 +21,7 @@
 
 var SHEET_ID     = '';                        // paste your Google Sheet ID here, or leave blank to auto-create
 var SHEET_NAME   = 'Leads';                   // tab name inside the sheet
-var NOTIFY_EMAIL = 'sunil@betascientific.com'; // where to send email alerts
+var NOTIFY_EMAIL = 'support@betascientific.com'; // where to send email alerts
 
 // ---- Column headers (written once on first submission) ----
 var HEADERS = ['Timestamp (IST)', 'Name', 'Phone', 'Email', 'Company', 'Service', 'Message', 'Source'];
